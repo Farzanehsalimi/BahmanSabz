@@ -1,3 +1,6 @@
-# bahman sabz frontend task
+# Bahman Sabz Frontend Task
 
-This project is a technical task for frontend developer position. Work in progress.
+### Authentication Flow
+
+![Authentication Flow]
+<img src="./readme-assets/auth-flow.gif" alt="auth" width="700"/>
