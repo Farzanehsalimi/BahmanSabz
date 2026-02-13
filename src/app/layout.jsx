@@ -2,10 +2,11 @@ import { Provider } from "@/components/ui/provider";
 import { Toaster } from "@/components/ui/toaster";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import ReactQueryProvider from "@/providers/ReactQueryProvider";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "600"], // Regular و SemiBold
+  weight: ["400", "600", "700"], // Regular, SemiBold, bold
   variable: "--font-inter",
   display: "swap",
 });
@@ -19,10 +20,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
       <body>
-        <Provider>
-          {children}
-          <Toaster />
-        </Provider>
+        <ReactQueryProvider>
+          <Provider>
+            {children}
+            <Toaster />
+          </Provider>
+        </ReactQueryProvider>
       </body>
     </html>
   );
